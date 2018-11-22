@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<title></title>
+</head>
+<body>
+<h3 class="center">1.6.2 频率测量方法与仪器</h3>
+<p class="left ">在电子测量中，对于频率的精度要求是根据所测频率范围和测量任务来决定的。例如，在一般实验室中，研究频率对谐振回路、电容器的损耗因数或其他被测电参量的影响时，能将频率测到<img src="/OPS/images/figure_0030_0036.jpg" alt="figure_0030_0036"/>数量级的精确度或稍高一点也就足够了；对于广播发射机的频率测量，其精确度应达到<img src="/OPS/images/figure_0030_0037.jpg" alt="figure_0030_0037"/>数量级；对于单边带通信机频率精确度则应优于<img src="/OPS/images/figure_0030_0038.jpg" alt="figure_0030_0038"/>；而对于宇宙通信、卫星通信、洲际导弹、核潜艇等的频率源的稳定度及频率测量准确度的要求，高达<img src="/OPS/images/figure_0030_0039.jpg" alt="figure_0030_0039"/>的数量级。</p>
+<p class="left ">频率的测量方法较多，测量频率的仪器种类也较多，应根据工作需要和仪器条件选用不同的测频方法。下面介绍基本的方法。</p>
+<p class="left ">1. 计数法测频</p>
+<p class="left ">计数法测频是以比较法作为基础，将被测信号的频率f<sub>x</sub>和由石英晶体振荡器产生的标准信号频率f<sub>o</sub>进行比较，比较结果以数字形式显示。其电路原理图见图1-12所示。</p>
+<p class="left ">频率为f<sup>x</sup>的被测信号输入到放大、整形电路，形成一个周期为T<sub>x</sub>的脉冲序列，加到闸门电路。晶体振荡器产生频率为f<sub>o</sub>的时基信号，先经整形，再经分频器进行分频或倍频，由闸门时间开关控制门控时间，门控电路输出的选通脉冲加到闸门电路，选通脉冲宽度为nT<sub>o</sub>。此时，通过闸门电路的计数脉冲数为：</p>
+<div class="pic"><img src="/OPS/images/figure_0030_0040.jpg" alt="figure_0030_0040"/></div>
+<p class="left ">由该式可化成被测信号频率f<sub>x</sub>和f<sub>o</sub>的关系式为：</p>
+<div class="pic"><img src="/OPS/images/figure_0030_0041.jpg" alt="figure_0030_0041"/></div>
+<p class="left ">式中：n、f<sub>o</sub>选择为确定值，则计数器的脉冲数N和被测信号频率成单值对应关系。常采用的仪器为数字式频率计、通用计数器。测量频率时，闸门时间T应选择大的，使显示有效数尽量多，以提高测量准确度。</p>
+<p class="left ">数字式频率计的精度决定于时基误差和量化误差。时基误差由晶体振荡器决定，其频率稳定度一般可达<img src="/OPS/images/figure_0031_0042.jpg" alt="figure_0031_0042"/>数量级。量化误差是数字化仪器所特有的误差。其最大误差总是1个量化单位，故称<img src="/OPS/images/figure_0031_0043.jpg" alt="figure_0031_0043"/>个字误差。在测量较低信号频率时，会带来较大的误差，如<img src="/OPS/images/figure_0031_0044.jpg" alt="figure_0031_0044"/>，&amp;nbsp;T=1s，则由<img src="/OPS/images/figure_0031_0045.jpg" alt="figure_0031_0045"/>个字误差产生的量化误差为<img src="/OPS/images/figure_0031_0046.jpg" alt="figure_0031_0046"/>，即测得<img src="/OPS/images/figure_0031_0047.jpg" alt="figure_0031_0047"/>，可见误差较大。所以在测量较低频率时，常用先测量周期再求频率的方法。</p>
+<div class="pic"><img src="/OPS/images/figure_0031_0048.jpg" alt="figure_0031_0048"/></div>
+<div class="grap">图1-12 计数法测频电路原理图</div>
+<p class="left ">2. 谐振法测频</p>
+<p class="left ">谐振法测频是利用选频电路的频率响应特性来测量频率，属于直接测量法。选频电路是由电感器、电容器采用串并联的方式组成的。谐振式波长表的原理图如图1-13所示。LC组成谐振回路。被测信号电压U<sub>X</sub>经耦合线圈加到谐振回路上，调节电容器C，使电压表指示值最大，此时LC回路谐振。被测频率值即可从电容器的度盘上读得。被测频率：</p>
+<div class="pic"><img src="/OPS/images/figure_0031_0049.jpg" alt="figure_0031_0049"/></div>
+<p class="left ">测量低于100 MHz信号的仪器，采用集中参数调谐回路；测量高于100 MHz信号的仪器，可采用各种形式的谐振腔。谐振法测量频率的误差决定于回路损耗、元件和刻度的精度，总误差约0.2%～1%。一般被用在频率粗测和大功率信号的测量。</p>
+<div class="pic"><img src="/OPS/images/figure_0031_0050.jpg" alt="figure_0031_0050"/></div>
+<div class="grap">图1-13 谐振式波长表原理图</div>
+<p class="left ">3. 示波法测频</p>
+<p class="left ">利用示波器测量频率的方法比较多，如周期换算法、李沙育图形法、亮度调制法、圆滚线法等。其中以周期换算法最简便，以李沙育图形法的测量准确度最高，因此被广泛应用。</p>
+<p class="left ">（1）周期换算法测频</p>
+<p class="left ">周期换算法测频是先利用示波器测出被测信号的一个完整周期的时间T，如峰点到峰点之间的时间，再求出被测信号的频率：</p>
+<div class="pic"><img src="/OPS/images/figure_0032_0051.jpg" alt="figure_0032_0051"/></div>
+<p class="left ">它是将被测信号的周期和示波器时基信号相比较的测量方法。此法方便，但误差较大，一般约为5%～10%。</p>
+<p class="left ">（2）李沙育图形法测频</p>
+<p class="left ">李沙育图形法测频是将被测信号加到示波器的Y轴输入端，标准信号加到示波器的X轴输入端，此时示波器内部扫描电路断开。两个信号都必须是正弦波，它们的频率比和初相位不同时，李沙育图形的形状也不同。若在荧光屏上作相互垂直的两条直线y-y<sup>’</sup>、x-x<sup>’</sup>，这两条直线不与李沙育图形相切（或都作抛物线），也不通过图形上的交点，则两条直线和图形的交点数之比，就是两个信号频率之比。即可求得被测信号频率f<sub>x</sub>=水平线与图形的交点数<img src="/OPS/images/figure_0032_0052.jpg" alt="figure_0032_0052"/>标准信号频率f<sub>o</sub>/垂直线与图形的交点数。以f<sub>x</sub>=f<sub>o</sub>为例，当初相位分别为0º、45º、90º时，李沙育图形依次为一条斜线、一个椭圆、一个圆形。李沙育图形法的工作频率约为10 Hz～30 MHz，测量准确度一般为0.3%。</p>
+<p class="left ">4. 差频法测频</p>
+<p class="left ">差频法测频，简称差频法又叫零拍法，原理方框图如图1-14所示。混频器将被测信号和晶体振荡器产生的高频信号进行混频，输出差频信号经滤波、放大送入耳机中。如果差频信号落在耳机的频响范围（20 Hz～20 kHz），便可以听到差频音调。根据差频音调的高低可以估计出f<sub>x</sub>与f<sub>o</sub>的相差大小，音调愈低，则f<sub>x</sub>与f<sub>o</sub>愈接近，电压表是用以配合耳机进行监测，以提高测量频率的准确度。当f<sup>x</sup>=f<sub>o</sub>时，电压表指针便停止摆动而停留在零点。差频法常用于对高频信号的测量。外差式频率计就是根据差频法测量频率的原理制成的。其工作频率约为100kHz～20MHz，最大优点是灵敏度高，可达<img src="/OPS/images/figure_0032_0053.jpg" alt="figure_0032_0053"/>。它几乎不从被测信号源吸收功率，也不对被测电路发生影响。因此，对微弱信号的频率测量极为有利。测量准确度可达10<sup>-4</sup>数量级。</p>
+<div class="pic"><img src="/OPS/images/figure_0032_0054.jpg" alt="figure_0032_0054"/></div>
+<div class="grap">图1-14 差频法测频原理方框图</div>
+<p class="left ">5. 拍频法测频</p>
+<p class="left ">拍频法测频的方框图如图1-15所示。工作原理和差频法类似，主要区别是两个频率相近的被测信号和标准信号在线性元件上进行叠加，其合成信号振幅的变化频率F是f<sub>x</sub>和f<sub>o</sub>之差。f<sub>x</sub>、f<sub>o</sub>愈接近，合成信号振幅的变化周期愈长，则拍频频率愈低，耳机中的声音响度的涨落次数愈少，电压表指针的摆动愈慢。</p>
+<p class="left ">拍频法适用于音频范围信号频率的测量，这是由于受指示器频响、标准频率稳定度及两个信号频率的牵引现象等的限制，而不适用于高频段的测量。为了降低测频误差，测频时应尽可能降低拍频频率。一般人耳有0～20 Hz无声哑区，电压表和示波器的人眼分辨力可达0.1 Hz，可见，耳机的分辨力较差。</p>
+<div class="pic"><img src="/OPS/images/figure_0033_0055.jpg" alt="figure_0033_0055"/></div>
+<div class="grap">图1-15 拍频法测频原理方框图</div>
+</body></html>

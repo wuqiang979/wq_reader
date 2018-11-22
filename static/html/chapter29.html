@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<title></title>
+</head>
+<body>
+<h3 class="center">1.7.2 相位测量方法与仪器</h3>
+<p class="left ">测量两个同频正弦信号相位差的方法很多，主要有计数法、鉴相法、示波法、比较法。示波法的方法简单、直观且易实施，但测量准确度较差，一般为2%～5%。测量5º以下时，测量误差超过10%。比较法的主要优点是测量范围宽，可以从音频到微波波段，但测量准确度也不够高。鉴相法的优点是方便、快速，测量准确度较高。计数法的测量准确度高，且便于数据处理。</p>
+<p class="left ">1. 计数法测相位</p>
+<p class="left ">测量相位的数字式计数法通常可分为两大类，即相位-电压变换法和相位-时间变换法。后者根据其计数方法的不同，又可分为瞬时值相位计数法和平均值相位计数法。平均值相位计数法由于具有能直接读测相位差，与被测信号的周期无关；受随机因素的干扰或仪表参数不稳引起的误差很小等优点，所以测量相位既快、又准确。目前，我国绝大多数数字相位计都采用平均值相位计数法。图1-17所示为平均值相位计数法原理方框图，图1-18所示为其波形图。</p>
+<div class="pic"><img src="/OPS/images/figure_0034_0067.jpg" alt="figure_0034_0067"/></div>
+<div class="grap">图1-17 平均值相位计数法原理方框图</div>
+<div class="pic"><img src="/OPS/images/figure_0035_0068.jpg" alt="figure_0035_0068"/></div>
+<div class="grap">图1-18 平均值相位计数法波形图</div>
+<p class="left ">两个被测信号U<sub>1</sub>、U<sub>2</sub>分别加到相应的脉冲整形器，脉冲整形器是过零比较电路。当被测信号电压量为零时，分别输出脉冲至门控1，使闸门1在周期重复的时间间隔τ内开启。触发电压U<sub>3</sub>控制门控2的开启并使计数器复零。门控2使闸门2在预先选定的一个较长的读测时间间隔T<sub>y</sub>开启，以便由时标脉冲振荡器输出的计数脉冲经闸门2作用在分频器和闸门1的输入端，因而计数脉冲（T<sub>o</sub>）在<img src="/OPS/images/figure_0035_0069.jpg" alt="figure_0035_0069"/>时间内通过闸门1，加到计数器进行计数显示。当分频器输出端没有出现关闭门控2的电压以前，计数过程一直进行着。也就是m倍分频器的工作，从闸门2通过第一个计数脉冲起，直到选定的时间T<sub>y</sub>，产生一个触发脉冲，使闸门2截止。</p>
+<p class="left ">由于选取的T<sub>y</sub>较长，且与被测信号的周期T无关，这样在T<sub>y</sub>内包含较多的T，使被测相位差均值化，起到了积分的作用。在测量的T<sub>y</sub>内，共有m个计数脉冲通过闸门2，即</p>
+<div class="pic"><img src="/OPS/images/figure_0035_0070.jpg" alt="figure_0035_0070"/></div>
+<p class="left ">在<img src="/OPS/images/figure_0035_0071.jpg" alt="figure_0035_0071"/>内，计数脉冲为：</p>
+<div class="pic"><img src="/OPS/images/figure_0035_0072.jpg" alt="figure_0035_0072"/></div>
+<p class="left ">在均值化时间（读测时间）T<sub>y</sub>内，脉冲群的数目为：</p>
+<div class="pic"><img src="/OPS/images/figure_0035_0073.jpg" alt="figure_0035_0073"/></div>
+<p class="left ">则均值化时间T<sub>y</sub>内的计数脉冲数：</p>
+<div class="pic"><img src="/OPS/images/figure_0035_0074.jpg" alt="figure_0035_0074"/></div>
+<p class="left ">可见显示值N与被测信号的相位差<img src="/OPS/images/figure_0035_0075.jpg" alt="figure_0035_0075"/>（以度为单位）成正比，分频器的分频系数m取10 k，k为正整数。</p>
+<p class="left ">2. 鉴相法测相位</p>
+<p class="left ">测量相位的鉴相法原理、波形图如图1-19所示。两个被测信号U<sub>1</sub>、U<sub>2</sub>分别经加、减法装置的矢量加减法运算和鉴相后，将相位差变换成与之成比例的电压，然后由磁电式表头指示出相位差值。两个整流电压的差值：</p>
+<div class="pic"><img src="/OPS/images/figure_0035_0076.jpg" alt="figure_0035_0076"/></div>
+<p class="left ">式中，K<sub>d</sub>是合成电压整流的电压传输系数。当<img src="/OPS/images/figure_0035_0077.jpg" alt="figure_0035_0077"/>，输出最大；当<img src="/OPS/images/figure_0035_0078.jpg" alt="figure_0035_0078"/>U<sub>d</sub>=0。其测量准确度决定于相位差变换为电压所产生的误差、电压的示值误差。如指针式相位计。</p>
+<div class="pic"><img src="/OPS/images/figure_0036_0079.jpg" alt="figure_0036_0079"/></div>
+<div class="grap">图1-19 鉴相法测相位原理图与波形图</div>
+<p class="left ">3. 比较法测相位</p>
+<p class="left ">比较法测量相位的原理方框图如图1-20所示。U<sub>2</sub>先经已定度的可调移相器输出U <sup>'</sup><sub>2</sub>，再和U<sub>1</sub>分别加到相位平衡指示器。调节移相器，当U <sup>'</sup><sub>2</sub>和U<sub>1</sub>同相时，指示器上的示值最大；当U<sup>'</sup><sub>2</sub>和U<sub>1</sub>反相时，示值最小。从而可以在移相器上读出被测相位差<img src="/OPS/images/figure_0036_0080.jpg" alt="figure_0036_0080"/>值或<img src="/OPS/images/figure_0036_0081.jpg" alt="figure_0036_0081"/>值。</p>
+<p class="left ">比较法测相位的测量准确度主要决定于移相器定度的精度。移相器通常采用各种RC移相电路。当被测相位经常变化而又要随时测读时，比较法就不太适用。</p>
+<div class="pic"><img src="/OPS/images/figure_0036_0082.jpg" alt="figure_0036_0082"/></div>
+<div class="grap">图1-20 比较法测相位原理方框图</div>
+<p class="left ">4. 示波法测相位</p>
+<p class="left ">（1）双踪（双线）示波法测相位</p>
+<p class="left ">利用双踪（或双线）示波器直接显示两个被测信号波形，测出它们之间的相位差，如图1-16。测量方法和测量时间间隔的方法相同，只要把X轴每1div（格）折算成相应的度数。相位差：</p>
+<p class="left ">为了读数和计算的方便，可调节示波器，使显示波形的一个周期正好占8格或9格，此时X轴上每格相当于<img src="/OPS/images/figure_0036_0083.jpg" alt="figure_0036_0083"/>每格。</p>
+<div class="pic"><img src="/OPS/images/figure_0036_0084.jpg" alt="figure_0036_0084"/></div>
+<p class="left ">同理，多踪示波器可用来测量多个被测信号之间的相位差。但在测量时，为保证统一的参考点进行比较，只能用其中一个信号去触发各路信号，而不能用多个信号，更不能用各自的信号分别去触发。</p>
+<p class="left ">目前，双踪示波器被广泛应用。它的测量准确度主要决定于扫描电压的非线性、两个Y通道存在固有相移和读数误差。</p>
+<p class="left ">（2）单踪示波法测相位</p>
+<p class="left ">在只有单踪示波器的情况下才采用此法。</p>
+<p class="left ">①两次波形显示法。由于两个波形的显示一先一后，因此必须采用同一个信号进行外触发扫描，并在显示第一个信号波形时，将触发控制器调整好；再显示第二个信号波形时，外触发信号及触发控制器都不能变动。然后测出周期T和时间间隔</p>
+<p class="left ">的所占格数，再求出
+<img src="/OPS/images/figure_0037_0086.jpg" alt="figure_0037_0086"/></p>
+<p class="left ">②椭圆法测相位。将<img src="/OPS/images/figure_0037_0087.jpg" alt="figure_0037_0087"/>分别加到示波器的X轴和Y轴输入端。随着两个被测信号间的相位差大小的变化，荧光屏上显示的椭圆形状也随之变化，如<img src="/OPS/images/figure_0037_0088.jpg" alt="figure_0037_0088"/>显示一条左斜线（/）&amp;nbsp;<img src="/OPS/images/figure_0037_0089.jpg" alt="figure_0037_0089"/>，显示一条右斜线（\）&amp;nbsp;<img src="/OPS/images/figure_0037_0090.jpg" alt="figure_0037_0090"/>，显示一个正圆；<img src="/OPS/images/figure_0037_0091.jpg" alt="figure_0037_0091"/>时，显示大小变化的左斜椭圆；<img src="/OPS/images/figure_0037_0092.jpg" alt="figure_0037_0092"/>时，显示大小变化的右斜椭圆。一个椭圆显示如图1-21所示。X=0时，椭圆在Y轴上的截距A对椭圆在Y轴方向的最大高度B的比值，即：</p>
+<div class="pic"><img src="/OPS/images/figure_0037_0093.jpg" alt="figure_0037_0093"/></div>
+<p class="left ">该方式适用于同频的等幅或不等幅的两个信号相位差的测量。测得的相位差具有双值性。对于同一个椭圆形的双值性，其区别仅在于扫描光点的绕向不同，即超前或滞后。若要用此法判断相位差是超前或滞后，可采用在Y轴输入端串接小电容器的方法。为了提高测量准确度，可在荧光屏上配置一个相位刻度板。</p>
+<div class="pic"><img src="/OPS/images/figure_0037_0094.jpg" alt="figure_0037_0094"/></div>
+<div class="grap">图1-21 椭圆显示示意图</div>
+</body></html>
