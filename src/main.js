@@ -4,8 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-// import fly from './http1.js'
-// Vue.prototype.$http1 = fly;
+import fly from './http1.js'
+Vue.prototype.$http1 = fly;
 
 import axios from './http.js'
 Vue.prototype.$http = axios;

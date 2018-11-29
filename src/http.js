@@ -10,8 +10,8 @@ import qs from 'qs'
 // import * as types from './store/types'
 
 // axios 配置
-var baseUrl = 'http://develop.bridge.kingchannels.cn/transfer';
-var bridgePlatformName = 'kezhiv2_web';
+var baseUrl = 'http://demo.bridge.kingchannels.cn/transfer';
+var bridgePlatformName = 'kezhidemo_web';
 axios.defaults.timeout = 60000;
 axios.defaults.baseURL = baseUrl;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
