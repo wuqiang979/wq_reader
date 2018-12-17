@@ -36,11 +36,6 @@ export default {
     };
   },
   mounted() {
-    // document.addEventListener('touchmove', function (event) {
-    //     event.preventDefault();
-    // }, {
-    //     passive: false
-    // });
     this.authorzie();
     this.getList();
     this.$http1.post('/v1/api/device/bind',{
